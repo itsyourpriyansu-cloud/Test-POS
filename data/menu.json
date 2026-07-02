@@ -1,0 +1,122 @@
+[
+  {
+    "id": "1",
+    "name": "Paneer Butter Masala",
+    "category": "Curry",
+    "price": 280,
+    "isVeg": true,
+    "description": "Rich and creamy paneer curry in a tomato-butter base."
+  },
+  {
+    "id": "2",
+    "name": "Butter Chicken",
+    "category": "Curry",
+    "price": 320,
+    "isVeg": false,
+    "description": "Tender tandoori chicken simmered in spiced tomato butter gravy."
+  },
+  {
+    "id": "3",
+    "name": "Chicken Biryani",
+    "category": "Rice",
+    "price": 350,
+    "isVeg": false,
+    "description": "Fragrant basmati rice layered with spiced marinated chicken."
+  },
+  {
+    "id": "4",
+    "name": "Veg Fried Rice",
+    "category": "Rice",
+    "price": 220,
+    "isVeg": true,
+    "description": "Wok-tossed rice with fresh seasonal vegetables and soy sauce."
+  },
+  {
+    "id": "5",
+    "name": "Butter Naan",
+    "category": "Bread",
+    "price": 60,
+    "isVeg": true,
+    "description": "Soft and fluffy traditional leavened flatbread brushed with butter."
+  },
+  {
+    "id": "6",
+    "name": "Garlic Naan",
+    "category": "Bread",
+    "price": 80,
+    "isVeg": true,
+    "description": "Tandoor baked flatbread flavored with minced garlic and herbs."
+  },
+  {
+    "id": "7",
+    "name": "Chilli Chicken",
+    "category": "Chinese",
+    "price": 290,
+    "isVeg": false,
+    "description": "Crispy chicken chunks tossed in sweet, spicy, and sour chilli sauce."
+  },
+  {
+    "id": "8",
+    "name": "Veg Manchurian",
+    "category": "Chinese",
+    "price": 240,
+    "isVeg": true,
+    "description": "Deep-fried mixed veg balls cooked in a tangy soy-based sauce."
+  },
+  {
+    "id": "9",
+    "name": "Fresh Lime Soda",
+    "category": "Beverages",
+    "price": 90,
+    "isVeg": true,
+    "description": "Refreshing lime juice with carbonated soda and sweet/salty syrup."
+  },
+  {
+    "id": "10",
+    "name": "Masala Chai",
+    "category": "Beverages",
+    "price": 60,
+    "isVeg": true,
+    "description": "Spiced Indian milk tea brewed with cardamom, ginger, and cloves."
+  },
+  {
+    "id": "11",
+    "name": "Gulab Jamun",
+    "category": "Desserts",
+    "price": 110,
+    "isVeg": true,
+    "description": "Warm milk-solid dumplings soaked in green cardamom flavored sugar syrup."
+  },
+  {
+    "id": "12",
+    "name": "Chocolate Brownie",
+    "category": "Desserts",
+    "price": 160,
+    "isVeg": true,
+    "description": "Rich and fudgy dark chocolate brownie served warm."
+  },
+  {
+    "id": "13",
+    "name": "Veg Spring Rolls",
+    "category": "Veg",
+    "price": 180,
+    "isVeg": true,
+    "description": "Crispy pastries filled with lightly seasoned stir-fried vegetables."
+  },
+  {
+    "id": "14",
+    "name": "Tandoori Paneer Tikka",
+    "category": "Veg",
+    "price": 260,
+    "isVeg": true,
+    "description": "Marinated paneer skewers charred in a traditional clay oven."
+  },
+  {
+    "id": "15",
+    "name": "Chicken Tikka",
+    "category": "Non Veg",
+    "price": 310,
+    "isVeg": false,
+    "description": "Boneless chicken marinated in yogurt and spices, grilled to perfection."
+  }
+]

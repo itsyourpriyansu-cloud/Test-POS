@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="brand-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E53935" />
+      <stop offset="100%" stop-color="#FF7043" />
+    </linearGradient>
+  </defs>
+  <!-- Background Card -->
+  <rect width="512" height="512" rx="128" fill="url(#brand-grad)" />
+  
+  <!-- Stylized Cloche (Serving Dish) & Flow lines -->
+  <g fill="#FFFFFF">
+    <!-- Steam lines -->
+    <path d="M210 120 c-5 -15 -10 -25 -2 -35 c8 -10 18 -5 18 10 c0 15 5 20 -2 30 c-5 5 -10 0 -14 -5 z" opacity="0.8" />
+    <path d="M256 110 c-5 -20 -12 -30 -2 -42 c10 -12 22 -6 22 12 c0 18 6 24 -2 36 c-6 6 -12 0 -18 -6 z" opacity="0.9" />
+    <path d="M302 120 c-5 -15 -10 -25 -2 -35 c8 -10 18 -5 18 10 c0 15 5 20 -2 30 c-5 5 -10 0 -14 -5 z" opacity="0.8" />
+    
+    <!-- Cloche Lid Handle -->
+    <circle cx="256" cy="180" r="18" />
+    
+    <!-- Cloche Lid Dome -->
+    <path d="M128 260 c0 -70 56 -126 128 -126 s128 56 128 126 z" />
+    
+    <!-- Cloche Tray Base -->
+    <rect x="108" y="276" width="296" height="24" rx="12" />
+    
+    <!-- Flow Arrow underneath cloche representing speed/flow -->
+    <path d="M160 340 h150 l-20 -20 h-110 z" opacity="0.7" />
+    <path d="M200 375 h150 l-20 -20 h-110 z" opacity="0.4" />
+  </g>
+  
+  <!-- Text initials for smaller screen context -->
+  <text x="256" y="450" font-family="'Inter', sans-serif" font-weight="800" font-size="52" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">KITCHENFLOW</text>
+</svg>

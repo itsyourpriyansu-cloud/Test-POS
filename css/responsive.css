@@ -1,0 +1,221 @@
+/* ==========================================================================
+   KitchenFlow Stylesheet - Responsive Layouts
+   ========================================================================== */
+
+/* ==========================================================================
+   Tablet Layout (>= 768px)
+   - Menu Screen: Two-column layout with Cart fixed on the right
+   - Billing Screen: Split list and invoice view side-by-side
+   - Kitchen Screen: columns wrap 2x2
+   ========================================================================== */
+@media (min-width: 768px) {
+  main {
+    padding-bottom: 0; /* Nav bar might be rearranged or room is sufficient */
+  }
+
+  .app-section {
+    padding: var(--space-24) var(--space-24);
+  }
+
+  /* Dashboard Metrics: 4 columns */
+  .metrics-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .metric-card.wide {
+    grid-column: span 2;
+  }
+
+  /* Menu Layout Splits */
+  #menu-section {
+    display: none; /* overrides default, active handles layout */
+  }
+
+  #menu-section.active {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: var(--space-24);
+    height: calc(100vh - 65px - 64px); /* fill screen minus header & footer */
+    overflow: hidden;
+  }
+
+  .menu-left-pane {
+    overflow-y: auto;
+    padding-right: var(--space-4);
+    height: 100%;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* In Tablet+, the Cart Bottom Sheet becomes a fixed right sidebar! */
+  .cart-summary-bar {
+    display: none !important; /* Hide floating bar */
+  }
+
+  .bottom-sheet-overlay {
+    display: none !important; /* Hide overlay background */
+  }
+
+  .bottom-sheet {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    transform: none !important;
+    max-height: none;
+    height: 100%;
+    border-radius: var(--radius-card);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-card);
+    z-index: 10;
+  }
+
+  .sheet-handle {
+    display: none;
+  }
+
+  /* Kitchen Kanban: 2x2 grid */
+  .kitchen-board {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-20);
+  }
+
+  .kanban-column {
+    height: 480px;
+  }
+
+  .column-content {
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  /* Billing: Split view side-by-side */
+  .billing-container {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: var(--space-24);
+    align-items: start;
+  }
+
+  .billing-order-picker {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .billing-order-list {
+    flex: 1;
+    max-height: none;
+    overflow-y: auto;
+  }
+}
+
+/* ==========================================================================
+   Desktop / POS Layout (>= 1024px)
+   - Menu items wrap 3-wide
+   - Kitchen board displays 4-columns side-by-side (true Kanban)
+   - Home Dashboard uses layout grids
+   ========================================================================== */
+@media (min-width: 1024px) {
+  header {
+    padding: var(--space-16) var(--space-32);
+  }
+
+  /* Shift bottom navigation to top right of header (Linear/Stripe style) */
+  footer {
+    position: static;
+    border-top: none;
+    box-shadow: none;
+    padding: 0;
+    width: auto;
+    z-index: auto;
+    gap: var(--space-12);
+  }
+
+  .nav-btn {
+    flex-direction: row;
+    gap: var(--space-8);
+    width: auto;
+    height: 40px;
+    padding: 0 var(--space-16);
+    border-radius: var(--radius-input);
+  }
+
+  .nav-btn svg {
+    margin-bottom: 0;
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Dashboard View splits */
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-24);
+    margin-top: var(--space-16);
+  }
+
+  .dashboard-main-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dashboard-side-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Menu Layout Splits (larger screen) */
+  #menu-section.active {
+    grid-template-columns: 1fr 380px;
+    height: calc(100vh - 69px); /* footer navigation is gone, is in header */
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Kitchen Kanban Board: Horizontal scroll 4-columns */
+  .kitchen-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-16);
+    align-items: start;
+  }
+
+  .kanban-column {
+    height: calc(100vh - 69px - 48px); /* fill vertical screen space */
+  }
+
+  /* Billing Split Panel */
+  .billing-container {
+    grid-template-columns: 360px 1fr;
+    height: calc(100vh - 69px - 48px);
+  }
+
+  .billing-order-picker {
+    height: 100%;
+  }
+
+  .invoice-pane {
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+/* ==========================================================================
+   Professional Large POS Layout (>= 1440px)
+   - Menu items wrap 4-wide
+   - Maximized spacing details
+   ========================================================================== */
+@media (min-width: 1440px) {
+  .menu-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

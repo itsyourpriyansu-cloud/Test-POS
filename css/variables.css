@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Colors */
+  --primary: #E53935;
+  --primary-hover: #D32F2F;
+  --accent: #FF7043;
+  --success: #43A047;
+  --warning: #F9A825;
+  --danger: #D32F2F;
+  --info: #1976D2;
+  --bg: #F6F7F9;
+  --card: #FFFFFF;
+  --text: #1A1A1A;
+  --text-secondary: #6B7280;
+  --border: #E5E7EB;
+  
+  /* Spacing System */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+
+  /* Border Radii */
+  --radius-card: 18px;
+  --radius-button: 16px;
+  --radius-input: 14px;
+  --radius-bottom-sheet: 28px;
+
+  /* Shadows */
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-button: 0 6px 18px rgba(0, 0, 0, 0.12);
+  --shadow-focus: 0 0 0 3px rgba(229, 57, 53, 0.2);
+
+  /* Typography Scale */
+  --font-display: 32px;
+  --font-heading: 24px;
+  --font-section: 20px;
+  --font-body: 16px;
+  --font-small: 14px;
+  --font-caption: 12px;
+
+  /* Font Weights */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Transitions */
+  --transition-speed: 180ms;
+  --transition-easing: ease-out;
+  --transition-default: all var(--transition-speed) var(--transition-easing);
+}
