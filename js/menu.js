@@ -23,33 +23,8 @@ const CATEGORY_ICONS = {
   Default: `<svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>`
 };
 
-const PIZZA_SVG = `<svg viewBox="0 0 100 100" width="100%" height="100%">
-  <!-- Golden Crust -->
-  <path d="M 50 15 L 85 80 A 10 10 0 0 1 75 90 L 25 90 A 10 10 0 0 1 15 80 Z" fill="#E67E22" stroke="#D35400" stroke-width="2" />
-  <!-- Crust edge shadow -->
-  <path d="M 17 80 A 10 10 0 0 0 25 90 L 75 90 A 10 10 0 0 0 83 80" fill="none" stroke="#C0392B" stroke-width="4" stroke-linecap="round" />
-  <!-- Pizza Base / Sauce -->
-  <path d="M 50 22 L 78 78 L 22 78 Z" fill="#C0392B" />
-  <!-- Cheese -->
-  <path d="M 50 25 L 75 75 A 5 5 0 0 1 71 80 L 29 80 A 5 5 0 0 1 25 75 Z" fill="#F1C40F" />
-  <!-- Melting cheese details -->
-  <path d="M 35 77 Q 40 85 45 78 Q 50 83 55 78 Q 60 85 65 77" fill="none" stroke="#F1C40F" stroke-width="4" stroke-linecap="round" />
-  <!-- Pepperonis -->
-  <circle cx="50" cy="45" r="7" fill="#E74C3C" />
-  <circle cx="50" cy="45" r="5" fill="#C0392B" opacity="0.6" />
-  <circle cx="38" cy="62" r="7" fill="#E74C3C" />
-  <circle cx="38" cy="62" r="5" fill="#C0392B" opacity="0.6" />
-  <circle cx="62" cy="62" r="7" fill="#E74C3C" />
-  <circle cx="62" cy="62" r="5" fill="#C0392B" opacity="0.6" />
-  <circle cx="50" cy="72" r="6" fill="#E74C3C" />
-  <circle cx="50" cy="72" r="4" fill="#C0392B" opacity="0.6" />
-  <!-- Oregano / Herbs -->
-  <rect x="42" y="35" width="2" height="4" rx="1" fill="#27AE60" transform="rotate(30 42 35)" />
-  <rect x="58" y="38" width="2" height="4" rx="1" fill="#27AE60" transform="rotate(-45 58 38)" />
-  <rect x="48" y="58" width="2" height="4" rx="1" fill="#27AE60" transform="rotate(15 48 58)" />
-  <rect x="32" y="52" width="2" height="4" rx="1" fill="#27AE60" transform="rotate(60 32 52)" />
-  <rect x="68" y="52" width="2" height="4" rx="1" fill="#27AE60" transform="rotate(-30 68 52)" />
-</svg>`;
+// Shared pizza image used for all menu items
+const PIZZA_IMG = `<img src="./assets/images/pizza.png" alt="Menu Item" class="product-img">`;
 
 export async function initMenu() {
   await loadMenuItems();
@@ -142,15 +117,15 @@ export function renderMenu() {
       ? '<span class="badge veg">Veg</span>' 
       : '<span class="badge non-veg">Non Veg</span>';
     
-    // Choose appropriate SVG icon based on category (forced Pizza illustration)
-    const iconSvg = PIZZA_SVG;
+    // Use shared pizza image for all menu items
+    const iconSvg = PIZZA_IMG;
     const itemInCart = cart.find(c => c.id === item.id);
     const quantityInCart = itemInCart ? itemInCart.quantity : 0;
 
     return `
       <div class="product-card" data-id="${item.id}">
         <div class="product-header">
-          <div class="product-icon-wrapper ${item.isVeg ? 'veg-theme' : 'nonveg-theme'}">
+          <div class="product-img-wrapper">
             ${iconSvg}
           </div>
           ${vegBadge}
